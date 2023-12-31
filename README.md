@@ -16,3 +16,5 @@ Technologies Used
 React
 Tailwind CSS
 TMDb API
+
+If you have any advice I would love to hear that
