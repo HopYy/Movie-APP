@@ -46,16 +46,10 @@ const Review = () => {
                 <>
                 <div className="w-full h-header-md lg:h-[60vh] relative overflow-hidden">
                     <div className="hidden lg:flex justify-center items-center w-full h-full absolute inset-0">
-                        {
-                            trailer ? (
-                                <TrailerVideo 
-                                    trailer={trailer}
-                                    img={`${process.env.REACT_APP_API_IMAGE}/${data.backdrop_path}`}
-                                 />
-                            ) : (
-                                <img className="w-full h-full object-cover object-center blur-sm" src={`${process.env.REACT_APP_API_IMAGE}/${data.backdrop_path}`} alt="Background" />
-                            )
-                        }
+                        <MainBackground 
+                            trailer={trailer} 
+                            data={data} 
+                        />
                     </div>
                     <div className="hidden lg:block w-full h-full absolute bottom-0 left-0 bg-gradient-to-t from-black to-transparent"></div>
                     <Header />
@@ -74,6 +68,25 @@ const Review = () => {
         </div>
         <Footer />
         </>
+    )
+}
+
+const MainBackground = ({ trailer, data }) => {
+    if(trailer) {
+        return (
+            <TrailerVideo 
+                trailer={trailer}
+                img={`${process.env.REACT_APP_API_IMAGE}/${data.backdrop_path}`}
+            />
+        )
+    }
+
+    return (
+        <img 
+            className="w-full h-full object-cover object-center blur-sm" 
+            src={`${process.env.REACT_APP_API_IMAGE}/${data.backdrop_path}`} 
+            alt="Background" 
+        />
     )
 }
 
