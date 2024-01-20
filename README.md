@@ -29,4 +29,9 @@ Found a bug or have an awesome idea? Contributions are more than welcome! Check 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+How to run it?
+-navigate to client folder in your terminal
+-type 'npm install' in your terminal (to install all modules that has been used in this project)
+-type 'npm start' in your terminal to start application
+
 Happy coding and movie watching! 🚀🎉
